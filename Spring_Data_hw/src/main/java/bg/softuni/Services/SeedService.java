@@ -1,4 +1,4 @@
-package bg.softuni.spring_data_hw.Services;
+package bg.softuni.Services;
 
 import java.io.IOException;
 

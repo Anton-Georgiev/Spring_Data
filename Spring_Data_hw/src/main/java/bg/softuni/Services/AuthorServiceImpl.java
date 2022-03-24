@@ -1,7 +1,7 @@
-package bg.softuni.spring_data_hw.Services;
+package bg.softuni.Services;
 
-import bg.softuni.spring_data_hw.Entities.Author;
-import bg.softuni.spring_data_hw.Repositories.AuthorRepository;
+import bg.softuni.Entities.Author;
+import bg.softuni.Repositories.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

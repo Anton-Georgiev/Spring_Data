@@ -1,18 +1,16 @@
-package bg.softuni.spring_data_hw;
+package bg.softuni;
 
-import bg.softuni.spring_data_hw.Entities.Author;
-import bg.softuni.spring_data_hw.Entities.Book;
-import bg.softuni.spring_data_hw.Repositories.AuthorRepository;
-import bg.softuni.spring_data_hw.Repositories.BookRepository;
-import bg.softuni.spring_data_hw.Services.SeedService;
+import bg.softuni.Entities.Author;
+import bg.softuni.Entities.Book;
+import bg.softuni.Repositories.AuthorRepository;
+import bg.softuni.Repositories.BookRepository;
+import bg.softuni.Services.SeedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
-import java.beans.Transient;
 import java.time.LocalDate;
-import java.util.Comparator;
 import java.util.List;
 
 @Component

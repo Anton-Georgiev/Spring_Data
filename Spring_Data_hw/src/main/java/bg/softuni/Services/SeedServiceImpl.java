@@ -1,9 +1,10 @@
-package bg.softuni.spring_data_hw.Services;
+package bg.softuni.Services;
 
-import bg.softuni.spring_data_hw.Entities.*;
-import bg.softuni.spring_data_hw.Repositories.AuthorRepository;
-import bg.softuni.spring_data_hw.Repositories.BookRepository;
-import bg.softuni.spring_data_hw.Repositories.CategoryRepository;
+import bg.softuni.Entities.*;
+import bg.softuni.Repositories.AuthorRepository;
+import bg.softuni.Repositories.BookRepository;
+import bg.softuni.Repositories.CategoryRepository;
+import bg.softuni.Entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

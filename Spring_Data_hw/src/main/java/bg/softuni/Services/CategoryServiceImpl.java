@@ -1,7 +1,7 @@
-package bg.softuni.spring_data_hw.Services;
+package bg.softuni.Services;
 
-import bg.softuni.spring_data_hw.Entities.Category;
-import bg.softuni.spring_data_hw.Repositories.CategoryRepository;
+import bg.softuni.Repositories.CategoryRepository;
+import bg.softuni.Entities.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

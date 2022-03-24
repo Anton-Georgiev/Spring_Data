@@ -1,4 +1,4 @@
-package bg.softuni.spring_data_hw.Entities;
+package bg.softuni.Entities;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

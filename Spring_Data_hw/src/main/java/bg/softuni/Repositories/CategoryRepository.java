@@ -1,6 +1,6 @@
-package bg.softuni.spring_data_hw.Repositories;
+package bg.softuni.Repositories;
 
-import bg.softuni.spring_data_hw.Entities.Category;
+import bg.softuni.Entities.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

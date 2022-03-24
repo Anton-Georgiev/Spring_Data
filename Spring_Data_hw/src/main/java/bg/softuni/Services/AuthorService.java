@@ -1,6 +1,6 @@
-package bg.softuni.spring_data_hw.Services;
+package bg.softuni.Services;
 
-import bg.softuni.spring_data_hw.Entities.Author;
+import bg.softuni.Entities.Author;
 import org.springframework.stereotype.Service;
 
 @Service

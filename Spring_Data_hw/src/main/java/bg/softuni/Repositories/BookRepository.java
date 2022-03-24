@@ -1,6 +1,6 @@
-package bg.softuni.spring_data_hw.Repositories;
+package bg.softuni.Repositories;
 
-import bg.softuni.spring_data_hw.Entities.Book;
+import bg.softuni.Entities.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
