@@ -21,7 +21,7 @@ public class ConsoleRunner implements CommandLineRunner {
     private final AuthorRepository authorRepository;
 
     @Autowired
-    public ConsoleRunner(SeedService seedService, BookRepository bookRepository, AuthorRepository authorRepository){
+    public ConsoleRunner(SeedService seedService, BookRepository bookRepository, AuthorRepository authorRepository) {
         this.seedService = seedService;
         this.bookRepository = bookRepository;
         this.authorRepository = authorRepository;
@@ -30,29 +30,29 @@ public class ConsoleRunner implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
-//        seedService.seedBooks();
-
+        seedService.seedAll();
 //      findALlAfter2000();
 //        findALlAuthorsWithAtLeastOneBookBefore1990();
-        findAllOrderedByBookCount();
+//        findAllOrderedByBookCount();
+        FindAllBooksFromAuthorGeorgePowellOrderedByTheirReleaseDate();
     }
 
 
-    private void findALlAfter2000(){
-        LocalDate date = LocalDate.of(2000, 1,1);
+    private void findALlAfter2000() {
+        LocalDate date = LocalDate.of(2000, 1, 1);
         List<Book> booksAfter2000 = this.bookRepository.findByReleaseDateGreaterThan(date);
         booksAfter2000.forEach(b -> System.out.println(b.getTitle()));
 
     }
 
 
-    private void findALlAuthorsWithAtLeastOneBookBefore1990(){
-        LocalDate date = LocalDate.of(1990, 1,1);
+    private void findALlAuthorsWithAtLeastOneBookBefore1990() {
+        LocalDate date = LocalDate.of(1990, 1, 1);
         List<Author> list = this.authorRepository.findDistinctByBooksReleaseDateLessThan(date);
-        list.forEach(e -> System.out.println(e.getFirstName()+ " " + e.getLastName()));
+        list.forEach(e -> System.out.println(e.getFirstName() + " " + e.getLastName()));
     }
 
-    private void findAllOrderedByBookCount(){
+    private void findAllOrderedByBookCount() {
         List<Author> list = this.authorRepository.findAll();
         list.stream()
                 .sorted((l, r) -> r.getBooks().size() - l.getBooks().size())
@@ -64,5 +64,13 @@ public class ConsoleRunner implements CommandLineRunner {
 
         List<Author> authors = this.authorRepository.findAll();
 
+    }
+
+    private void FindAllBooksFromAuthorGeorgePowellOrderedByTheirReleaseDate() {
+
+        List<Book> books = this.bookRepository.findAllByAuthorFirstNameAndAuthorLastNameOrderByReleaseDateDescTitleAsc("George", "Powell");
+        for (Book book : books) {
+            System.out.printf("%s %s %d\n", book.getTitle(), book.getReleaseDate(), book.getCopies());
+        }
     }
 }
